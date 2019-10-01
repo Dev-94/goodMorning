@@ -10,7 +10,7 @@ def home(request):
 
 
 # Function to detect if it is 6:00 AM each day
-def time_of_day:
+def time_of_day():
     return time.strftime("%H:%M:%S")
 
 target_time = "6:00:00"
@@ -18,10 +18,10 @@ target_time = "6:00:00"
 while True:
     while time_of_day() != target_time:
         time.sleep(.1)
-    call_function()
     while time_of_day() == target_time:
+        gfg()
         time.sleep(.1)
-
+        
 
 # Functions for timers and calling Twilio sms API
 # def countdown(n) :
@@ -38,10 +38,10 @@ def gfg():
     print('good night\n')
 
 #establishes paramaters for timer
-timer = threading.Timer(1.0, gfg)
+# timer = threading.Timer(1.0, gfg)
 
 #call timer to begin
-timer.start()
+# timer.start()
 
 
 # Ways of accessing time of the day
@@ -50,7 +50,7 @@ timer.start()
 # print(time.clock()) 
 
 # gives me day, month, date, hour, minute, seconds, year
-print(time.ctime(%X, %P, 6:00, AM))
+# print(time.ctime(%X, %P, 6:00, AM))
 
 # give locat time, but broken into seperate elements in a tuple
 # print(time.localtime()) 
