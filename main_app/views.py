@@ -4,23 +4,36 @@ import time
 import threading
 # from twilio.rest import Client
 
+# If it is this time fire off this function 
+
+# POST ON STACK OVERFLOW IF NOT RESEARCHED BY OCT. 2, 3PM
+
 # Render Home Page
 def home(request):
     return render(request, 'about.html')
 
-
+tod = ''
 # Function to detect if it is 6:00 AM each day
 def time_of_day():
-    return time.strftime("%H:%M:%S")
+    tod = time.strftime("%H:%M:%S")
+    return tod
 
-target_time = "6:00:00"
+# target_time = "19:04:00"
+
+# print(target_time)
+# if time_of_day == "19:07:00":
+#     print(hello)
 
 while True:
-    while time_of_day() != target_time:
+    while tod == "19:27:00":
         time.sleep(.1)
-    while time_of_day() == target_time:
-        gfg()
+    while tod == "19:27:00":
         time.sleep(.1)
+        print("good morning\n")
+            # def gfg():
+#             # from send_sms import message    
+#             print('good night\n')
+
         
 
 # Functions for timers and calling Twilio sms API
@@ -32,10 +45,10 @@ while True:
 #             print('BLAST OFF!')
 
 #sends sms message adn prints goodnight
-def gfg():
-    print("good morning\n")
-    from send_sms import message    
-    print('good night\n')
+# def gfg():
+#     print("good morning\n")
+#     from send_sms import message    
+#     print('good night\n')
 
 #establishes paramaters for timer
 # timer = threading.Timer(1.0, gfg)

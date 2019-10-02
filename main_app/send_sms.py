@@ -8,8 +8,8 @@ auth_token  = ""
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
-    to="+1" , 
-    from_="+1",
+    to="+" , 
+    from_="+",
     body="Good Morning")
 
 print(message.sid)
