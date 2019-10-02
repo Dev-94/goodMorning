@@ -12,27 +12,27 @@ import threading
 def home(request):
     return render(request, 'about.html')
 
-tod = ''
+
 # Function to detect if it is 6:00 AM each day
 def time_of_day():
-    tod = time.strftime("%H:%M:%S")
-    return tod
+    return time.strftime("%H:%M:%S")
+     
 
-# target_time = "19:04:00"
+target_time = "19:04:00"
 
 # print(target_time)
 # if time_of_day == "19:07:00":
 #     print(hello)
 
 while True:
-    while tod == "19:27:00":
+    while time_of_day == target_time:
         time.sleep(.1)
-    while tod == "19:27:00":
-        time.sleep(.1)
+    while time_of_day == target_time:
         print("good morning\n")
-            # def gfg():
-#             # from send_sms import message    
-#             print('good night\n')
+        def gfg():
+            # from send_sms import message    
+            print('good night\n')
+        time.sleep(.1)
 
         
 
